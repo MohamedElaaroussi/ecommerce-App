@@ -10,12 +10,12 @@ const BestSellers = () => {
       {store.map((item) => {
         if (item.type == "bestSeller")
           return (
-            <Link to={`/${item.id}`} key={item.id}>  
-            <div key={item.id} className="bestSellerIndivitualItem">
-              <HoverImage src={item.primaryImage} hoverSrc={item.hoverImg}   className="bestSellerImage rounded-xl mb-6"/>
-              <p className='bestSellerName text-center mb-2'> {item.name} </p>
-              <p className=' font-normal text-center'> ${item.price} </p>
-            </div>
+            <Link to={`/${item.id}`} key={item.id}>
+              <div key={item.id} className="bestSellerIndivitualItem">
+                <HoverImage src={item.primaryImage} hoverSrc={item.hoverImg} className="bestSellerImage rounded-xl mb-6" />
+                <p className='bestSellerName text-center mb-2'> {item.name} </p>
+                <p className=' font-normal text-center'> ${item.price} </p>
+              </div>
             </Link>
           )
       })}
